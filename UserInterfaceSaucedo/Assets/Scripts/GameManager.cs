@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,12 +11,36 @@ public class GameManager : MonoBehaviour
     private float spawnRate = 1.0f;
     public TextMeshProUGUI scoreText;
     private int score;
+    public TextMeshProUGUI gameOverText;
+    public bool isGameActive;
+    public Button restartButton;
+    public GameObject titleScreen;
     // Start is called before the first frame update
     void Start()
     {
+
+    }
+
+    public void StartGame(int difficulty)
+    {
+        spawnRate /= difficulty;
+        titleScreen.gameObject.SetActive(false);
+        isGameActive=true; 
         score = 0;
         StartCoroutine(SpawnTarget());
         UpdateScore(0);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GameOver()
+    {
+        restartButton.gameObject.SetActive(true);
+        isGameActive = false;
+        gameOverText.gameObject.SetActive(true);
     }
 
 
@@ -25,7 +51,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator SpawnTarget()
     {
-        while (true)
+        while (isGameActive)
         {
             
             yield return new WaitForSeconds(spawnRate);
