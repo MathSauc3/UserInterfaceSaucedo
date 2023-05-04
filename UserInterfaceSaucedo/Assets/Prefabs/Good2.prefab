@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1531083722100682980}
   - component: {fileID: 1531083722100682981}
   - component: {fileID: -6482128255035283082}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Good2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,6 +140,10 @@ PrefabInstance:
     - target: {fileID: 2184612376268763248, guid: 307229a5540374aae98859caad2128a3, type: 3}
       propertyPath: m_Name
       value: Explosion_Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2184612376268763248, guid: 307229a5540374aae98859caad2128a3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5334385635598324169, guid: 307229a5540374aae98859caad2128a3, type: 3}
       propertyPath: m_Materials.Array.size

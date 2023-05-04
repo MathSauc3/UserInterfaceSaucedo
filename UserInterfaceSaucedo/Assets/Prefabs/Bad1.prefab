@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9132162239397228433}
   - component: {fileID: 9132162239397228434}
   - component: {fileID: -4427586689570768623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bad1
   m_TagString: Bad
   m_Icon: {fileID: 0}
@@ -221,6 +221,10 @@ PrefabInstance:
     - target: {fileID: 8088288519815545661, guid: c7ad2532a6eeb40b59033c75e71fa054, type: 3}
       propertyPath: m_Name
       value: Explosion_Black
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088288519815545661, guid: c7ad2532a6eeb40b59033c75e71fa054, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7ad2532a6eeb40b59033c75e71fa054, type: 3}
